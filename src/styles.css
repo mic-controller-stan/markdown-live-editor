@@ -62,40 +62,41 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
+  --radius: 0.5rem;
+  --background: oklch(0.17 0.012 265);
+  --foreground: oklch(0.93 0.008 265);
+  --card: oklch(0.21 0.014 265);
+  --card-foreground: oklch(0.93 0.008 265);
+  --popover: oklch(0.21 0.014 265);
+  --popover-foreground: oklch(0.93 0.008 265);
+  --primary: oklch(0.72 0.15 175);
+  --primary-foreground: oklch(0.17 0.012 265);
+  --secondary: oklch(0.25 0.015 265);
+  --secondary-foreground: oklch(0.93 0.008 265);
+  --muted: oklch(0.25 0.015 265);
+  --muted-foreground: oklch(0.66 0.015 265);
+  --accent: oklch(0.3 0.02 265);
+  --accent-foreground: oklch(0.95 0.008 265);
+  --destructive: oklch(0.62 0.2 25);
+  --destructive-foreground: oklch(0.97 0.008 265);
+  --border: oklch(0.29 0.015 265);
+  --input: oklch(0.29 0.015 265);
+  --ring: oklch(0.72 0.15 175);
+  --chart-1: oklch(0.72 0.15 175);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --sidebar: oklch(0.21 0.014 265);
+  --sidebar-foreground: oklch(0.93 0.008 265);
+  --sidebar-primary: oklch(0.72 0.15 175);
+  --sidebar-primary-foreground: oklch(0.17 0.012 265);
+  --sidebar-accent: oklch(0.3 0.02 265);
+  --sidebar-accent-foreground: oklch(0.95 0.008 265);
+  --sidebar-border: oklch(0.29 0.015 265);
+  --sidebar-ring: oklch(0.72 0.15 175);
 }
+
 
 .dark {
   --background: oklch(0.129 0.042 264.695);
@@ -142,3 +143,54 @@
     color: var(--color-foreground);
   }
 }
+
+.markdown-body {
+  color: var(--color-foreground);
+  line-height: 1.7;
+}
+.markdown-body > * + * { margin-top: 0.9em; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3,
+.markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-top: 1.4em;
+}
+.markdown-body h1 { font-size: 1.7rem; }
+.markdown-body h2 { font-size: 1.35rem; }
+.markdown-body h3 { font-size: 1.15rem; }
+.markdown-body a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+.markdown-body ul, .markdown-body ol { padding-left: 1.35rem; }
+.markdown-body ul { list-style: disc; }
+.markdown-body ol { list-style: decimal; }
+.markdown-body li + li { margin-top: 0.3em; }
+.markdown-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
+  background: var(--color-muted);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+}
+.markdown-body pre {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+}
+.markdown-body pre code { background: none; padding: 0; font-size: 0.85em; }
+.markdown-body blockquote {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 0.9rem;
+  color: var(--color-muted-foreground);
+  font-style: italic;
+}
+.markdown-body table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+.markdown-body th, .markdown-body td {
+  border: 1px solid var(--color-border);
+  padding: 0.45rem 0.7rem;
+  text-align: left;
+}
+.markdown-body th { background: var(--color-muted); font-weight: 600; }
+.markdown-body hr { border-top: 1px solid var(--color-border); }
+.markdown-body img { max-width: 100%; border-radius: var(--radius-md); }
